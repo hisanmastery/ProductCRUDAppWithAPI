@@ -1,0 +1,67 @@
+﻿@model ProductDto
+<div class="card shadow border-0 mt-4">
+	<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h1 class="text-white">Products List</h1>
+			</div>
+		</div>
+	</div>
+	<div class="card-body p-4">
+		<div class="row pb-3">
+			<div class="col-6">
+				<form asp-controller="Product" asp-action="ProductDetails" method="get">
+                    <br />
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+									<div class="input-group mb-3">
+										<input type="text" name="productId" />
+										<button type="submit">Search</button>
+									</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+			</div>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Photo</th>
+					<th>
+						Name
+					</th>
+					<th>
+						Summary
+					</th>
+					<th>
+						Modified On
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>
+							<img src="@Model.ImageUrl" class="rounded" width="50px" />
+						</td>
+						<td>
+							@Model.ProductName
+						</td>
+						<td>
+							@Model.Summary
+						</td>
+						<td>
+							@Model.ModificationOn
+						</td>						
+					</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</div>

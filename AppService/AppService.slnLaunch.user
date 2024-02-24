@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "AppService.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "..\\App.Web\\App.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
